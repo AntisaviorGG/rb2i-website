@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RB2I LLC — Software &amp; Engineering</title>
+<meta name="description" content="RB2I LLC is a developing software and engineering business based in Miramar, Florida.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307090f'/%3E%3Ccircle cx='14' cy='44' r='5' fill='%234da6ff'/%3E%3Ccircle cx='32' cy='22' r='5' fill='%2300d4aa'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%234da6ff'/%3E%3Cpath d='M18 41 L28 25 M36 25 L46 37' stroke='%239aa3b8' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#07090f;
+  --text:#eef1f8;
+  --muted:#9aa3b8;
+  --muted2:#6e7791;
+  --accent:#4da6ff;
+  --accent2:#00d4aa;
+  --border:rgba(255,255,255,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  background:
+    radial-gradient(ellipse 70% 45% at 50% -5%,rgba(77,166,255,.14),transparent 65%),
+    radial-gradient(ellipse 45% 35% at 85% 105%,rgba(0,212,170,.08),transparent 60%),
+    var(--bg);
+  color:var(--text);line-height:1.7;min-height:100vh;
+  display:flex;flex-direction:column;
+  -webkit-font-smoothing:antialiased;
+}
+main{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:80px 24px 60px;max-width:720px;margin:0 auto;width:100%;
+}
+.mark{
+  width:72px;height:72px;border-radius:18px;margin-bottom:30px;
+  border:1px solid var(--border);background:rgba(255,255,255,.03);
+  display:flex;align-items:center;justify-content:center;
+}
+h1{font-size:clamp(44px,8vw,64px);font-weight:700;letter-spacing:-1.5px;line-height:1.05}
+h1 span{color:var(--accent)}
+.tagline{
+  margin-top:16px;font-size:clamp(18px,3vw,22px);font-weight:500;
+  background:linear-gradient(120deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+p.about{margin-top:26px;font-size:17px;color:var(--muted);max-width:520px}
+.focus{
+  margin-top:38px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+}
+.focus span{
+  padding:7px 16px;border:1px solid var(--border);border-radius:999px;
+  font-size:13.5px;font-weight:500;color:var(--muted);background:rgba(255,255,255,.03);
+}
+.where{margin-top:38px;font-size:14px;color:var(--muted2);letter-spacing:.4px}
+.contact{margin-top:52px;width:100%;max-width:520px;text-align:left}
+.contact h2{font-size:20px;font-weight:600;text-align:center;margin-bottom:8px}
+.contact .note{text-align:center;font-size:14px;color:var(--muted2);margin-bottom:20px;line-height:1.6}
+.contact label{display:block;font-size:13.5px;font-weight:500;color:var(--muted);margin:14px 0 6px}
+.contact input[type=text],.contact input[type=email],.contact textarea{
+  width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--border);
+  background:rgba(255,255,255,.03);color:var(--text);font-size:15px;font-family:inherit;
+}
+.contact input:focus,.contact textarea:focus{outline:none;border-color:var(--accent)}
+.contact textarea{resize:vertical;min-height:110px}
+.contact button{
+  margin-top:20px;width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;
+  background:linear-gradient(120deg,var(--accent),var(--accent2));color:#06121f;
+  font-size:15.5px;font-weight:600;font-family:inherit;
+}
+.contact button:disabled{opacity:.55;cursor:default}
+.contact .status{margin-top:14px;font-size:14.5px;text-align:center;min-height:22px}
+.contact .status.ok{color:var(--accent2)}
+.contact .status.err{color:#ff7a7a}
+footer a{color:var(--muted2)}
+footer a:hover{color:var(--text)}
+footer{
+  border-top:1px solid var(--border);padding:26px 24px;text-align:center;
+  color:var(--muted2);font-size:13.5px;
+}
+</style>
+</head>
+<body>
+
+<main>
+  <div class="mark" aria-hidden="true">
+    <svg width="40" height="40" viewBox="0 0 64 64"><circle cx="14" cy="44" r="5" fill="#4da6ff"/><circle cx="32" cy="22" r="5" fill="#00d4aa"/><circle cx="50" cy="40" r="5" fill="#4da6ff"/><path d="M18 41 L28 25 M36 25 L46 37" stroke="#9aa3b8" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </div>
+  <h1>RB2I<span>.</span></h1>
+  <div class="tagline">Software &amp; Engineering</div>
+  <p class="about">RB2I LLC is a developing software and engineering business. We design and build technology products, and we are growing our capabilities project by project.</p>
+  <div class="focus">
+    <span>Software Development</span>
+    <span>Engineering</span>
+    <span>Research &amp; Development</span>
+  </div>
+  <div class="where">RB2I LLC &middot; Miramar, Florida</div>
+
+  <section class="contact" aria-label="Contact RB2I">
+    <h2>Send us a message</h2>
+    <p class="note">Questions about working with us? Send a message here. It goes straight to our team inbox &mdash; we never publish our email address. Please don&rsquo;t send confidential information. See our <a href="legal.html" style="color:var(--accent)">Legal</a> page for how messages are handled.</p>
+    <!-- Before go-live: replace WEB3FORMS_ACCESS_KEY_PENDING below with the Web3Forms
+         access key issued for the RB2I inbox (see README.md). The key is a public
+         form-routing key, not a password; the destination email never appears here. -->
+    <form id="contact-form" data-access-key="WEB3FORMS_ACCESS_KEY_PENDING">
+      <label for="cf-name">Your name</label>
+      <input type="text" id="cf-name" name="name" required autocomplete="name">
+      <label for="cf-email">Your email</label>
+      <input type="email" id="cf-email" name="email" required autocomplete="email">
+      <label for="cf-subject">Subject</label>
+      <input type="text" id="cf-subject" name="subject">
+      <label for="cf-message">Message</label>
+      <textarea id="cf-message" name="message" required></textarea>
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit" id="cf-send">Send message</button>
+      <div class="status" id="cf-status" role="status" aria-live="polite"></div>
+    </form>
+  </section>
+</main>
+
+<footer>&copy; 2026 RB2I LLC &mdash; All Rights Reserved. &middot; <a href="legal.html">Legal</a></footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  var form = e.target, btn = document.getElementById('cf-send'), status = document.getElementById('cf-status');
+  var key = form.getAttribute('data-access-key');
+  btn.disabled = true; status.className = 'status'; status.textContent = 'Sending…';
+  try {
+    var res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({
+        access_key: key,
+        from_name: 'RB2I Website',
+        subject: (form.subject.value || 'Website message') + ' — RB2I website',
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+        botcheck: form.botcheck.checked
+      })
+    });
+    var data = await res.json();
+    if (data.success) {
+      form.reset();
+      status.className = 'status ok';
+      status.textContent = 'Message sent. Thank you — we read every message and reply as time permits.';
+    } else { throw new Error('send failed'); }
+  } catch (err) {
+    status.className = 'status err';
+    status.textContent = 'Sorry — the message could not be sent. Please try again in a little while.';
+  } finally { btn.disabled = false; }
+});
+</script>
+
+</body>
+</html>
