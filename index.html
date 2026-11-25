@@ -154,5 +154,18 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 });
 </script>
 
+<script>
+// Keep the logo animation playing: browsers pause looping videos in idle
+// tabs to save power, so nudge it back whenever it stops.
+(function () {
+  var v = document.querySelector('.mark video');
+  if (!v) return;
+  function kick() { if (v.paused) { v.play().catch(function () {}); } }
+  setInterval(kick, 3000);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) kick(); });
+  v.addEventListener('pause', function () { setTimeout(kick, 500); });
+})();
+</script>
+
 </body>
 </html>
