@@ -98,10 +98,9 @@ footer{
   <section class="contact" aria-label="Contact RB2I">
     <h2>Send us a message</h2>
     <p class="note">Questions about working with us? Send a message here. It goes straight to our team inbox &mdash; we never publish our email address. Please don&rsquo;t send confidential information. See our <a href="legal.html" style="color:var(--accent)">Legal</a> page for how messages are handled.</p>
-    <!-- Before go-live: replace WEB3FORMS_ACCESS_KEY_PENDING below with the Web3Forms
-         access key issued for the RB2I inbox (see README.md). The key is a public
-         form-routing key, not a password; the destination email never appears here. -->
-    <form id="contact-form" data-access-key="WEB3FORMS_ACCESS_KEY_PENDING">
+    <!-- Form routing: FormSubmit alias endpoint (see README.md). The alias is a
+         public form-routing string, not a password; no email address appears here. -->
+    <form id="contact-form">
       <label for="cf-name">Your name</label>
       <input type="text" id="cf-name" name="name" required autocomplete="name">
       <label for="cf-email">Your email</label>
@@ -123,24 +122,24 @@ footer{
 document.getElementById('contact-form').addEventListener('submit', async function (e) {
   e.preventDefault();
   var form = e.target, btn = document.getElementById('cf-send'), status = document.getElementById('cf-status');
-  var key = form.getAttribute('data-access-key');
+  if (form.botcheck.checked) { return; }
   btn.disabled = true; status.className = 'status'; status.textContent = 'Sending…';
   try {
-    var res = await fetch('https://api.web3forms.com/submit', {
+    var res = await fetch('https://formsubmit.co/ajax/e1e6aca9ecff8290f2eedc71011eab20', {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
       body: JSON.stringify({
-        access_key: key,
-        from_name: 'RB2I Website',
-        subject: (form.subject.value || 'Website message') + ' — RB2I website',
         name: form.name.value,
         email: form.email.value,
+        subject: (form.subject.value || 'Website message') + ' — RB2I website',
         message: form.message.value,
-        botcheck: form.botcheck.checked
+        _cc: 'Malachi.Brown@yahoo.com',
+        _template: 'table',
+        _honey: ''
       })
     });
     var data = await res.json();
-    if (data.success) {
+    if (data.success === 'true' || data.success === true) {
       form.reset();
       status.className = 'status ok';
       status.textContent = 'Message sent. Thank you — we read every message and reply as time permits.';

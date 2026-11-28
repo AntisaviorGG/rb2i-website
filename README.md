@@ -26,16 +26,19 @@ This folder is the repository root. To go live:
 
 Minimal, public-knowledge only. The site presents RB2I LLC only as a developing software and engineering business. It must never include sensitive information: no patent or project details, no email addresses or other personal contact details, no addresses beyond city/state, no financial information, no other RB2I businesses, and no material from private plans.
 
-## Contact form (added Nov 24, 2026)
-The home page has a "Send us a message" form. It posts to Web3Forms
-(https://api.web3forms.com/submit), which delivers submissions to the RB2I
-team inbox (get.help.rb2i@gmail.com). The destination email appears NOWHERE
-in the site files — the form carries only a public Web3Forms access key.
+## Contact form (added Nov 24, 2026; switched to FormSubmit Nov 27, 2026)
+The home page has a "Send us a message" form. It posts via AJAX to
+FormSubmit (https://formsubmit.co/ajax/<alias>), which delivers each
+submission to soljjaboii1@gmail.com and CCs Malachi.Brown@yahoo.com — both
+inboxes get every message (Malachi's direction, Nov 27, 2026). The form
+carries only the public FormSubmit alias string
+(e1e6aca9ecff8290f2eedc71011eab20); no destination email appears in the
+form endpoint. The CC address sits in a `_cc` field in the submit script.
 
-**Before go-live, one step:** get the access key from web3forms.com for the
-RB2I inbox (they email it to that inbox), then replace
-`WEB3FORMS_ACCESS_KEY_PENDING` in index.html with the key. Until then the
-form will show a "could not be sent" message.
+History: the form originally used Web3Forms with a placeholder key (never
+activated). FormSubmit was chosen because Web3Forms charges for CC
+delivery. Activation was anchored on the Gmail after FormSubmit's
+activation emails to Yahoo were never delivered (two attempts, Nov 27).
 
 ## Legal page
 `legal.html` — Terms of Use, message/submission terms (submissions are
